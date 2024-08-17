@@ -12,9 +12,9 @@ This guide will walk you through the process of setting up a virtual environment
 
 4. Create a new virtual environment:
    ```
-   python -m venv myenv
+   python -m venv newenv
    ```
-   Replace "myenv" with whatever name you want to give your virtual environment.
+   Replace "newenv" with whatever name you want to give your virtual environment.
 
 5. Activate the virtual environment:
    - On Windows:
