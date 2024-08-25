@@ -19,11 +19,11 @@ This guide will walk you through the process of setting up a virtual environment
 5. Activate the virtual environment:
    - On Windows:
      ```
-     myenv\Scripts\activate
+     newenv\Scripts\activate
      ```
    - On macOS and Linux:
      ```
-     source myenv/bin/activate
+     source newenv/bin/activate
      ```
 
 6. You should now see the name of your virtual environment in parentheses at the beginning of your terminal prompt, indicating it's active.
