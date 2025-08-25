@@ -38,6 +38,10 @@ This guide will walk you through the process of setting up a virtual environment
    python -m pip install -r requirements.txt
    ```
 
+#### To see just the path
+  (Get-Command python).Source
+  (Get-Command pip).Source
+
 8. When you're done working in the virtual environment, you can deactivate it:
    ```
    deactivate
@@ -57,8 +61,12 @@ This guide will walk you through the process of setting up a virtual environment
    ```
    gcm pip
    ``` 
-4. 
-
+4. To see just the path
+   ```
+  (Get-Command python).Source
+  ```
+  (Get-Command pip).Source
+   ```
 
 ## Other Tips
 
