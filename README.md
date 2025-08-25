@@ -33,6 +33,11 @@ This guide will walk you through the process of setting up a virtual environment
    pip install package_name
    ```
 
+8. Or install via requirements.txt:
+      ```
+   python -m pip install -r requirements.txt
+   ```
+
 8. When you're done working in the virtual environment, you can deactivate it:
    ```
    deactivate
