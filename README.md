@@ -10,13 +10,13 @@ This guide will walk you through the process of setting up a virtual environment
 
 3. Navigate to your project directory if you're not already there.
 
-4. Create a new virtual environment:
+5. Create a new virtual environment:
    ```
    python -m venv newenv
    ```
    Replace "newenv" with whatever name you want to give your virtual environment.
 
-5. Activate the virtual environment:
+6. Activate the virtual environment:
    - On Windows:
      ```
      newenv\Scripts\activate
@@ -26,14 +26,14 @@ This guide will walk you through the process of setting up a virtual environment
      source newenv/bin/activate
      ```
 
-6. You should now see the name of your virtual environment in parentheses at the beginning of your terminal prompt, indicating it's active.
+7. You should now see the name of your virtual environment in parentheses at the beginning of your terminal prompt, indicating it's active.
 
-7. Install your required packages:
+8. Install your required packages:
    ```
    pip install package_name
    ```
 
-8. Or install via requirements.txt:
+9. Or install via requirements.txt:
       ```
    python -m pip install -r requirements.txt
    ```
@@ -43,7 +43,24 @@ This guide will walk you through the process of setting up a virtual environment
    deactivate
    ```
 
-## Additional Tips:
+## Troubleshooting
+1. If you installed modules and it cannot find them, it may have installed for a different python install.
+2. Check version
+   ```
+   python --version
+   ```
+   Check version and location
+    ```
+   gcm python
+    ```
+   Also check pip:
+   ```
+   gcm pip
+   ``` 
+4. 
+
+
+## Other Tips
 
 - Remember to add your virtual environment folder (myenv in this case) to your .gitignore file if you're using version control.
 
