@@ -49,7 +49,7 @@ This guide will walk you through the process of setting up a virtual environment
 
 ## Troubleshooting
 1. If you installed modules and it cannot find them, it may have installed for a different python install.
-2. Check version
+2. Always check which pip/python you're using
    ```
    python --version
    ```
@@ -61,12 +61,55 @@ This guide will walk you through the process of setting up a virtual environment
    ```
    gcm pip
    ``` 
-4. To see just the path
-   ```
+4. To see just the path:
+```
   (Get-Command python).Source
-  ```
   (Get-Command pip).Source
    ```
+5. Sometimes you need to back up completely to get it working right
+   Update Python and recreate virtual environment
+ ### Remove old virtual environment
+   ```
+   Remove-Item -Recurse -Force newenv
+   ``` 
+  ### Download and install version of Python you need, or check what versions are available
+   ```
+   py -0
+   ``` 
+  For example it will show:
+   -V:3.11 *        Python 3.11 (64-bit)
+   -V:3.10          Python 3.10 (64-bit)
+   -V:3.7-32        Python 3.7 (32-bit)
+   -V:2.7           Python 2.7
+   
+  ### Then use the specific version of Python to crease the environment 
+   ```
+   py -3.11 -m venv newenv311
+   newenv311\Scripts\Activate.ps1
+   newenv\Scripts\Activate.ps1
+   pip install -r requirements.txt
+   ``` 
+  ### Always Use Absolute Paths (Most Reliable)
+   ```
+   newenv\Scripts\pip.exe install pandas
+   newenv\Scripts\python.exe script.py
+   ``` 
+
+6. Better Virtual Environment Workflow
+
+### After Activate, immediately verify
+  newenv\Scripts\Activate.ps1
+  where python  # Should show newenv path
+  where pip     # Should show newenv path
+
+### If paths are wrong, deactivate and use absolute paths
+Use python -m pip Instead of pip
+### This ensures you're using the Python you think you are
+
+  python -m pip install pandas
+  # vs just
+  pip install pandas  # Could go anywhere
+
 
 ## Other Tips
 
