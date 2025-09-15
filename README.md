@@ -134,4 +134,50 @@ If you encounter any issues while setting up your virtual environment, consider 
 - Check that you're in the correct directory when creating and activating the virtual environment.
 - If activation doesn't work, try using the full path to the activate script.
 
+
+Python Version/Environment Differences
+
+  What you experienced:
+
+  - System terminal: Uses system-wide Python (wrong version)
+  - IDE terminal: Uses your selected Python environment (correct version)
+
+  Why this happens:
+
+  1. PATH priority: System terminal uses whatever python is first in your PATH
+  2. IDE integration: Your IDE (VS Code, PyCharm, etc.) activates the correct environment automatically
+  3. Virtual environments: The (newenv311) prefix shows you're in a Python 3.11 virtual environment
+
+  Solutions:
+
+  Option 1: Use the IDE terminal (what you're doing)
+
+  ✅ Recommended - Keep using the terminal that opened from your IDE
+
+  Option 2: Manually activate environment in any terminal
+
+  # Find your environment path first
+  where python  # or which python on Mac/Linux
+
+  # Then activate it
+  # On Windows:
+  C:\path\to\your\newenv311\Scripts\activate
+
+  # On Mac/Linux:
+  source /path/to/your/newenv311/bin/activate
+
+  Option 3: Use full path to correct Python
+
+  # Instead of: python import_data.py
+  # Use: /full/path/to/newenv311/python import_data.py
+
+
+
+
+
+
+
+
+
+
 For more detailed information, refer to the [official Python documentation on virtual environments](https://docs.python.org/3/tutorial/venv.html).
