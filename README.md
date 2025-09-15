@@ -156,15 +156,13 @@ Python Version/Environment Differences
 
   Option 2: Manually activate environment in any terminal
 
-  # Find your environment path first
+  ### Find your environment path first
   where python  # or which python on Mac/Linux
 
-  # Then activate it
-  # On Windows:
+  Then activate it
+  On Windows:
   C:\path\to\your\newenv311\Scripts\activate
 
-  # On Mac/Linux:
-  source /path/to/your/newenv311/bin/activate
 
   Option 3: Use full path to correct Python
 
