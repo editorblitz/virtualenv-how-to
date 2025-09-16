@@ -16,7 +16,17 @@ This guide will walk you through the process of setting up a virtual environment
    ```
    Replace "newenv" with whatever name you want to give your virtual environment.
 
-6. Activate the virtual environment:
+   or don't fuck around, name your python. the IDE selector doesn't change what the terminal PATH runs to.
+   ```
+   C:/Users/chris/AppData/Local/Programs/Python/Python311/python.exe -m venv venv
+   ```
+This command uses your Python 3.11.4 installation to create a venv folder in your project directory. When you activate this environment with:
+```
+.\venv\Scripts\Activate.ps1
+ ```
+your terminal and pip commands will use Python 3.11.4 and install packages locally to this folder. This keeps your project isolated and ensures you use the correct Python version.
+
+5. Activate the virtual environment:
    - On Windows:
      ```
      newenv\Scripts\activate
@@ -26,14 +36,14 @@ This guide will walk you through the process of setting up a virtual environment
      source newenv/bin/activate
      ```
 
-7. You should now see the name of your virtual environment in parentheses at the beginning of your terminal prompt, indicating it's active.
+6. You should now see the name of your virtual environment in parentheses at the beginning of your terminal prompt, indicating it's active.
 
-8. Install your required packages:
+7. Install your required packages:
    ```
    pip install package_name
    ```
 
-9. Or install via requirements.txt:
+8. Or install via requirements.txt:
       ```
    python -m pip install -r requirements.txt
    ```
